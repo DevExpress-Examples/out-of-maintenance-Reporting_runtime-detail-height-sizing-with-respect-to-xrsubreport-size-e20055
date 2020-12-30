@@ -5,16 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{62844CD2-2539-4630-9EA8-9C80CE0BADA9}</ProjectGuid>
+    <ProjectGuid>{827F3780-DD83-4CE1-88F7-5C9F6EB19359}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace></RootNamespace>
     <AssemblyName>dx_sample</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -26,7 +27,6 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <RemoveIntegerChecks>true</RemoveIntegerChecks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -36,85 +36,71 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
-    <RemoveIntegerChecks>true</RemoveIntegerChecks>
   </PropertyGroup>
   <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Linq" />
-    <Import Include="System.Xml.Linq" />
-    <Import Include="System.Threading.Tasks" />
-    <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
-    <Import Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.Charts.v13.2.Core.dll</HintPath>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Charts.v13.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v13.2, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.Data.v13.2.dll</HintPath>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Data.v13.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.PivotGrid.v13.2.Core.dll</HintPath>
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.PivotGrid.v13.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.Printing.v13.2.Core.dll</HintPath>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Printing.v13.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.Office.v13.2.Core.dll</HintPath>
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Office.v13.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.RichEdit.v13.2.Core.dll</HintPath>
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.RichEdit.v13.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.Utils.v13.2.dll</HintPath>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Utils.v13.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.XtraCharts.v13.2.Wizard.dll</HintPath>
+    <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraCharts.v13.2.Wizard.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.XtraCharts.v13.2.dll</HintPath>
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraCharts.v13.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.XtraEditors.v13.2.dll</HintPath>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraEditors.v13.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v13.2, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.XtraPivotGrid.v13.2.dll</HintPath>
+    <Reference Include="DevExpress.XtraPivotGrid.v13.2, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraPivotGrid.v13.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.XtraPrinting.v13.2.dll</HintPath>
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraPrinting.v13.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.Utils.v13.2.UI.dll</HintPath>
+    <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Utils.v13.2.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.XtraReports.v13.2.Extensions.dll</HintPath>
+    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraReports.v13.2.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.Sparkline.v13.2.Core.dll</HintPath>
+    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Sparkline.v13.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>C:\DXDlls\13.2.15\DevExpress.XtraReports.v13.2.dll</HintPath>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraReports.v13.2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -157,9 +143,8 @@
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -188,7 +173,6 @@
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My</CustomToolNamespace>
     </None>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>

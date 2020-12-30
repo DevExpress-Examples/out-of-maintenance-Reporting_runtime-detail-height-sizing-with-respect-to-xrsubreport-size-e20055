@@ -1,4 +1,6 @@
-﻿Namespace dx_sample
+﻿Imports Microsoft.VisualBasic
+Imports System
+Namespace dx_sample
 	Partial Public Class XtraReport1
 		''' <summary>
 		''' Required designer variable.
@@ -44,8 +46,7 @@
 			Me.Detail.Name = "Detail"
 			Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F)
 			Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
-'ORIGINAL LINE: this.Detail.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Detail_BeforePrint);
+'			Me.Detail.BeforePrint += New System.Drawing.Printing.PrintEventHandler(Me.Detail_BeforePrint);
 			' 
 			' xrSubreport1
 			' 
@@ -53,8 +54,7 @@
 			Me.xrSubreport1.Name = "xrSubreport1"
 			Me.xrSubreport1.ReportSource = New dx_sample.XtraReport2()
 			Me.xrSubreport1.SizeF = New System.Drawing.SizeF(100F, 23F)
-'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
-'ORIGINAL LINE: this.xrSubreport1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrSubreport1_BeforePrint);
+'			Me.xrSubreport1.BeforePrint += New System.Drawing.Printing.PrintEventHandler(Me.xrSubreport1_BeforePrint);
 			' 
 			' xrLabel1
 			' 

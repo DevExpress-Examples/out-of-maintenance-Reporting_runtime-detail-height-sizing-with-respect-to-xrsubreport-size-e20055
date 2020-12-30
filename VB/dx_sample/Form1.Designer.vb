@@ -1,4 +1,6 @@
-﻿Namespace dx_sample
+﻿Imports Microsoft.VisualBasic
+Imports System
+Namespace dx_sample
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -32,8 +34,7 @@
 			Me.ClientSize = New System.Drawing.Size(284, 262)
 			Me.Name = "Form1"
 			Me.Text = "Form1"
-'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
-'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
+'			Me.Load += New System.EventHandler(Me.Form1_Load);
 			Me.ResumeLayout(False)
 
 		End Sub

@@ -1,4 +1,6 @@
-﻿Namespace dx_sample
+﻿Imports Microsoft.VisualBasic
+Imports System
+Namespace dx_sample
 	Partial Public Class XtraReport2
 		''' <summary>
 		''' Required designer variable.
@@ -71,10 +73,7 @@
 			' xrLabel1
 			' 
 			Me.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom
-			Me.xrLabel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {
-				New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Orders.OrderID", "{0:Order \##}"),
-				New DevExpress.XtraReports.UI.XRBinding("Tag", Nothing, "Orders.CustomerID")
-			})
+			Me.xrLabel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Orders.OrderID", "{0:Order \##}"), New DevExpress.XtraReports.UI.XRBinding("Tag", Nothing, "Orders.CustomerID")})
 			Me.xrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(0F, 0F)
 			Me.xrLabel1.Name = "xrLabel1"
 			Me.xrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)

@@ -1,4 +1,5 @@
-﻿Imports System
+﻿Imports Microsoft.VisualBasic
+Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -10,14 +11,13 @@ Imports System.Data
 Namespace dx_sample
 	Partial Public Class XtraReport1
 		Inherits DevExpress.XtraReports.UI.XtraReport
-
-		Private sections As Dictionary(Of String, Single) = New Dictionary(Of String,Single)()
+		Private sections As New Dictionary(Of String, Single)()
 		Public Sub New()
 			InitializeComponent()
 		End Sub
 		Private documentBuilt As Boolean = False
 		Private Sub xrSubreport1_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles xrSubreport1.BeforePrint
-			DirectCast(sender, XRSubreport).ReportSource.Parameters(0).Value = GetCurrentColumnValue("CustomerID").ToString()
+			CType(sender, XRSubreport).ReportSource.Parameters(0).Value = GetCurrentColumnValue("CustomerID").ToString()
 		End Sub
 		Public Sub CreateCustomDocument()
 			CreateDocument()
@@ -44,7 +44,7 @@ Namespace dx_sample
 		End Sub
 		Private Sub Detail_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles Detail.BeforePrint
 			Dim customerID As String = GetCurrentColumnValue("CustomerID").ToString()
-			If CType(xrSubreport1.ReportSource, XtraReport).Parameters.Count > 0 Then
+			If (CType(xrSubreport1.ReportSource, XtraReport)).Parameters.Count > 0 Then
 				CType(xrSubreport1.ReportSource, XtraReport).Parameters(0).Value = customerID
 			End If
 			xrSubreport1.ReportSource.FillDataSource()
@@ -53,14 +53,14 @@ Namespace dx_sample
 				e.Cancel = True
 				Return
 			End If
-			If Not documentBuilt Then
+			If (Not documentBuilt) Then
 				Return
 			End If
-			If Not sections.ContainsKey(customerID) Then
-				System.Diagnostics.Debug.WriteLine(customerID & " not found.") '  Not executed.
+			If (Not sections.ContainsKey(customerID)) Then
+				System.Diagnostics.Debug.WriteLine(customerID & " not found.") ' Not executed.
 			Else
 				xrLabel1.HeightF = 100 * GraphicsUnitConverter.Convert(sections(customerID), GraphicsUnit.Document, GraphicsUnit.Inch)
-				DirectCast(sender, DetailBand).HeightF = 100 * GraphicsUnitConverter.Convert(sections(customerID), GraphicsUnit.Document, GraphicsUnit.Inch)
+				CType(sender, DetailBand).HeightF = 100 * GraphicsUnitConverter.Convert(sections(customerID), GraphicsUnit.Document, GraphicsUnit.Inch)
 			End If
 		End Sub
 	End Class
